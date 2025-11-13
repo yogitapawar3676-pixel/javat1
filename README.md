@@ -1,46 +1,47 @@
-# javat1
-import java.util.Scanner;
+Basic Calculator (Java)
 
-public class BasicCalculator {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+This is a simple Java program that works like a basic calculator. It can perform simple math operations such as addition, subtraction, multiplication, and division. The user just needs to enter two numbers and choose the operator. The program will then show the result.
 
-        System.out.println("=== Basic Calculator ===");
-        System.out.print("Enter first number: ");
-        double num1 = sc.nextDouble();
+How it works
 
-        System.out.print("Enter operator (+, -, *, /): ");
-        char operator = sc.next().charAt(0);
+When you run the program, it will:
 
-        System.out.print("Enter second number: ");
-        double num2 = sc.nextDouble();
+Ask you to enter the first number.
 
-        double result = 0;
+Ask for the operator (+, -, *, /).
 
-        switch (operator) {
-            case '+':
-                result = num1 + num2;
-                break;
-            case '-':
-                result = num1 - num2;
-                break;
-            case '*':
-                result = num1 * num2;
-                break;
-            case '/':
-                if (num2 != 0)
-                    result = num1 / num2;
-                else {
-                    System.out.println("Error! Division by zero is not allowed.");
-                    return;
-                }
-                break;
-            default:
-                System.out.println("Invalid operator!");
-                return;
-        }
+Ask for the second number.
 
-        System.out.println("Result: " + result);
-        sc.close();
-    }
-}
+Then it will calculate and display the result.
+If you try to divide a number by zero, it will show an error message.
+
+Example
+Enter first number: 10
+Enter operator (+, -, *, /): *
+Enter second number: 5
+Result: 50.0
+
+Steps to run the program
+
+Open any Java IDE (like NetBeans, Eclipse, or IntelliJ) or use Command Prompt.
+
+Save the file with the name BasicCalculator.java.
+
+Compile the program using:
+
+javac BasicCalculator.java
+
+
+Then run it using:
+
+java BasicCalculator
+
+Future improvements
+
+In the future, this calculator can be improved by:
+
+Adding more operations like square root, power, and percentage
+
+Making a graphical version using Java Swing
+
+Handling more user input errors
